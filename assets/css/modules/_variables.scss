@@ -7,11 +7,41 @@
 $black            : #262626;
 $white            : #FFFFFF;
 $blue             : #0000FF;
+$red              : #FF0000;
+$yellow           : #F9FF05;
+$green            : #05FF4A;
 
 // Assign colours to variable roles
 $body-color       : $white;
 $base-color       : $black;
 $action           : $blue;
+
+
+
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+
+// Extra small screen / phone
+$screen-xs:                  600px !default;
+$screen-xs-min:              $screen-xs !default;
+
+// Small screen / tablet
+$screen-sm:                  900px !default;
+$screen-sm-min:              $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md:                  1200px !default;
+$screen-md-min:              $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1600px !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
 
 
 /*------------------------------------*\
@@ -20,7 +50,80 @@ $action           : $blue;
 
 
 $border-width-sm         : 1px;
-$border-width-md         : 3px;
+$border-width-md         : $border-width-sm*3;
+
+
+
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+
+%font-body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+%font-body-italic{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+%font-body-bold{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+%font-body-bold-italic{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+/*------------------------------------*\
+    #TYPESIZE/SCALE
+\*------------------------------------*/
+
+$font-base         : 1rem;
+$type-scale        : 1.333;
+
+$font-size-sm      : $font-base / $type-scale;
+$font-size-md      : $font-base;
+$font-size-lg      : $font-base * $type-scale;
+$font-size-xl      : $font-base * $type-scale * $type-scale;
+
+
+html {
+  font-size: 16px;
+  @media (min-width: $screen-md-min) {
+    font-size: 18px;
+  }
+  @media (min-width: $screen-lg-min) {
+    font-size: 20px;
+  }
+}
+
+%font-size-sm {
+  font-size: $font-size-sm;
+  line-height: 1.5;
+}
+%font-size-md {
+  font-size: $font-size-md;
+  line-height: 1.5;
+}
+%font-size-lg {
+  font-size: $font-size-lg;
+  line-height: 1.5;
+}
+%font-size-xl {
+  font-size: $font-size-xl;
+  line-height: 1.5;
+}
 
 
 
@@ -29,71 +132,13 @@ $border-width-md         : 3px;
 \*------------------------------------*/
 
 
-$spacing-base     : 5px;
+$spacing-base     : 1rem;
 
-$spacing-xxxl     : $spacing-base * 20;  // 100px
-$spacing-xxl      : $spacing-base * 16;  // 80px
-$spacing-xl       : $spacing-base * 12;  // 60px
-$spacing-lg       : $spacing-base * 8;   // 40px
-$spacing-md       : $spacing-base * 6;   // 30px
-$spacing-sm       : $spacing-base * 4;   // 20px
-$spacing-xs       : $spacing-base * 3;   // 15px
-$spacing-xxs      : $spacing-base * 2;   // 10px
-
-$spacing-res-ratio : 1.1;
-
-$spacing-xxxl-responsive: (
-  null : $spacing-xxxl / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-xxxl / $spacing-res-ratio,
-  md   : $spacing-xxxl,
-  lg   : $spacing-xxxl * $spacing-res-ratio,
-);
-
-$spacing-xxl-responsive: (
-  null : $spacing-xxl / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-xxl / $spacing-res-ratio,
-  md   : $spacing-xxl,
-  lg   : $spacing-xxl * $spacing-res-ratio,
-);
-
-$spacing-xl-responsive: (
-  null : $spacing-xl / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-xl / $spacing-res-ratio,
-  md   : $spacing-xl,
-  lg   : $spacing-xl * $spacing-res-ratio,
-);
-
-$spacing-lg-responsive: (
-  null : $spacing-lg / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-lg / $spacing-res-ratio,
-  md   : $spacing-lg,
-  lg   : $spacing-lg * $spacing-res-ratio,
-);
-
-$spacing-md-responsive: (
-  null : $spacing-md / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-md / $spacing-res-ratio,
-  md   : $spacing-md,
-  lg   : $spacing-md * $spacing-res-ratio,
-);
-
-$spacing-sm-responsive: (
-  null : $spacing-sm / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-sm / $spacing-res-ratio,
-  md   : $spacing-sm,
-  lg   : $spacing-sm * $spacing-res-ratio,
-);
-
-$spacing-xs-responsive: (
-  null : $spacing-xs / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-xs / $spacing-res-ratio,
-  md   : $spacing-xs,
-  lg   : $spacing-xs * $spacing-res-ratio,
-);
-
-$spacing-xxs-responsive: (
-  null : $spacing-xxs / ($spacing-res-ratio * $spacing-res-ratio),
-  sm   : $spacing-xxs / $spacing-res-ratio,
-  md   : $spacing-xxs,
-  lg   : $spacing-xxs * $spacing-res-ratio,
-);
+$spacing-xxxl     : $spacing-base * 8;
+$spacing-xxl      : $spacing-base * 4;
+$spacing-xl       : $spacing-base * 3;
+$spacing-lg       : $spacing-base * 2;
+$spacing-md       : $spacing-base * 1.5;
+$spacing-sm       : $spacing-base;
+$spacing-xs       : $spacing-base / 2;
+$spacing-xxs      : $spacing-base / 4;

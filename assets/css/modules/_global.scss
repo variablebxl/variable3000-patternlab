@@ -4,9 +4,9 @@
 
 
 dl {
-  @include font-size($font-sizes-sm);
+  @extend %font-size-md;
   dt {
-    @extend .font-body-bold;
+    @extend %font-body-bold;
     padding-bottom: .3em;
     &:first-of-type {
       padding-top: .6em;
@@ -32,14 +32,14 @@ dl {
   li {
     position: relative;
     padding-left: 1.2em;
-    @include font-size($font-sizes-md);
+    @extend %font-size-md;
     margin-bottom: .5em;
     &:before {
       content:counter(li);
       counter-increment:li;
       position: absolute;
       left: 0;
-      @extend .font-body;
+      @extend %font-body;
       font-size: 1em;
       color: rgba($base-color, .5);
     }
@@ -59,13 +59,13 @@ dl {
   li {
     position: relative;
     padding-left: 1.2em;
-    @include font-size($font-sizes-md);
+    @extend %font-size-md;
     margin-bottom: .5em;
     &:before {
       content: "-";
       position: absolute;
       left: 0;
-      @extend .font-body;
+      @extend %font-body;
       font-size: 1em;
     }
   }
@@ -88,7 +88,7 @@ dl {
   }
   th {
     text-align: left;
-    @extend .font-body-bold;
+    @extend %font-body-bold;
   }
   tbody tr {
     &:nth-child(odd) {

@@ -6,12 +6,7 @@
 @import "modules/_reset.scss";
 @import "modules/_variables.scss";
 @import "modules/_mixins.scss";
-@import "modules/_grid-settings.scss";
-@import "modules/_grid-mixins.scss";
-@import "modules/_grid-make.scss";
 @import "modules/_typography.scss";
-@import "modules/_forms.scss";
-@import "modules/_extends.scss";
 @import "modules/_global.scss";
 
 
@@ -39,15 +34,8 @@
 \*------------------------------------*/
 
 
-html {
-  font-size: 100%;
-  @include respond-to-max(768px, $IE9: false) { // Stop at precise width, as we're talking about devices
-    -webkit-text-size-adjust: 100%; // Stops text scaling in iOS.
-  }
-}
-
 body {
-  @extend .font-body;
+  @extend %font-body;
   background: $body-color;
   color: $base-color;
   text-rendering: optimizeLegibility;
