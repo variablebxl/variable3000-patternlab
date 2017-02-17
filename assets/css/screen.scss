@@ -16,6 +16,7 @@
 \*------------------------------------*/
 
 
+@import "partials/components/_patternlab.scss";
 @import "partials/components/_buttons.scss";
 @import "partials/components/_images.scss";
 
@@ -41,6 +42,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  ::-moz-selection { background-color: rgba($yellow, .3); color: $base-color; }
+  ::selection { background-color: rgba($yellow, .3); color: $base-color; }
 }
 
 

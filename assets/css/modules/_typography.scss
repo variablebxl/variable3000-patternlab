@@ -6,6 +6,7 @@
 h1,
 h2 {
   @extend %font-size-xl;
+  @extend %font-body-bold;
 }
 
 h3,
@@ -13,6 +14,7 @@ h4,
 h5,
 h6 {
   @extend %font-size-lg;
+  @extend %font-body-bold;
 }
 
 p {
@@ -89,7 +91,7 @@ p cite {
 }
 
 p mark {
-  background-color: rgba($action, .2);
+  background-color: rgba($yellow, .6);
   color: $base-color;
 }
 

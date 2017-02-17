@@ -90,7 +90,8 @@ $border-width-md         : $border-width-sm*3;
 \*------------------------------------*/
 
 $font-base         : 1rem;
-$type-scale        : 1.333;
+$type-scale        : 1.25;
+$line-height       : 1.4;
 
 $font-size-sm      : $font-base / $type-scale;
 $font-size-md      : $font-base;
@@ -100,29 +101,25 @@ $font-size-xl      : $font-base * $type-scale * $type-scale;
 
 html {
   font-size: 16px;
-  @media (min-width: $screen-md-min) {
-    font-size: 18px;
-  }
-  @media (min-width: $screen-lg-min) {
-    font-size: 20px;
-  }
+  letter-spacing: .04em;
+  word-spacing: -.02em;
 }
 
 %font-size-sm {
   font-size: $font-size-sm;
-  line-height: 1.5;
+  line-height: $line-height;
 }
 %font-size-md {
   font-size: $font-size-md;
-  line-height: 1.5;
+  line-height: $line-height;
 }
 %font-size-lg {
   font-size: $font-size-lg;
-  line-height: 1.5;
+  line-height: $line-height;
 }
 %font-size-xl {
   font-size: $font-size-xl;
-  line-height: 1.5;
+  line-height: $line-height;
 }
 
 
