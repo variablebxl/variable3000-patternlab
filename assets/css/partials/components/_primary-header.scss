@@ -29,6 +29,9 @@ h1.site-title {
   a {
     color: $base-color;
   }
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: $spacing-xs;
+  }
 }
 
 .nav__list {
@@ -40,8 +43,8 @@ h1.site-title {
     &:first-of-type {
       margin-left: $spacing-sm;
     }
-    &:not(:last-of-type) {
-      margin-right: $spacing-xs;
-    }
+  }
+  &:not(:last-of-type) {
+    margin-right: $spacing-xs;
   }
 }
