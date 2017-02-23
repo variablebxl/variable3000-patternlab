@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  #INDEX-ITEM
+\*------------------------------------*/
+
+
+.item__link {
+  color: $base-color;
+  text-decoration: none;
+  &:hover {
+    color: $action;
+    text-decoration: none;
+  }
+}
+
+.item__title {
+  @extend %font-body;
+  @extend %font-size-md;
+  margin-top: $spacing-xs;
+}
+
+.item__excerpt {
+  @extend %font-size-sm;
+  margin-top: $spacing-xs;
+}
+
+.item__date {
+  display: block;
+  @extend %font-size-xs;
+  margin-bottom: $spacing-xxs;
+}
+
+.item__thumb {
+  img {
+    width: 100%;
+    display: block;
+  }
+}

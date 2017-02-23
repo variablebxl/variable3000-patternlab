@@ -11,11 +11,6 @@
       "title" : "infos",
       "url" : "#",
       "go_out" : false
-    },
-    {
-      "title" : "Autre part",
-      "url" : "http://www.variable.club",
-      "go_out" : true
     }
   ],
   "index_items" : [

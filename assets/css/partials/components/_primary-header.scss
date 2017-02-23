@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #PRIMARY-HEADER
+\*------------------------------------*/
+
+
+.primary-header {
+  margin-bottom: $spacing-xxl;
+}
+
+nav.nav {
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.nav a {
+  color: $action;
+  text-decoration: none;
+  &:hover {
+    color: $action-response;
+    text-decoration: none;
+  }
+}
+
+h1.site-title {
+  @extend %font-size-md;
+  @extend %font-body;
+  a {
+    color: $base-color;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: baseline;
+}
+.nav__item {
+  @media (min-width: $screen-sm-min) {
+    &:first-of-type {
+      margin-left: $spacing-sm;
+    }
+    &:not(:last-of-type) {
+      margin-right: $spacing-xs;
+    }
+  }
+}
