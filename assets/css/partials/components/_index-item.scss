@@ -15,7 +15,7 @@
 .item__title {
   @extend %font-body;
   @extend %font-size-md;
-  margin-top: $spacing-xs;
+  margin-top: $spacing-sm;
 }
 
 .item__excerpt {
@@ -26,7 +26,7 @@
 .item__date {
   display: block;
   @extend %font-size-xs;
-  margin-bottom: $spacing-xxs;
+  margin-bottom: $spacing-sm;
 }
 
 .item__thumb {

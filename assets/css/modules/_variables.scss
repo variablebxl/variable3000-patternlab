@@ -61,25 +61,25 @@ $border-width-md         : $border-width-sm*3;
 
 
 %font-body{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
 %font-body-italic{
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: italic;
 }
 
 %font-body-bold{
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: normal;
 }
 
 %font-body-bold-italic{
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
 }
@@ -92,7 +92,7 @@ $border-width-md         : $border-width-sm*3;
 
 $font-base         : 1rem;
 $type-scale        : 1.25;
-$line-height       : 1.3125;
+$line-height       : 1.4;
 
 $font-size-xs      : $font-base / $type-scale / $type-scale;
 $font-size-sm      : $font-base / $type-scale;

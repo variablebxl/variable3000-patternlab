@@ -1,0 +1,11 @@
+/*------------------------------------*\
+  #PRIMARY-FOOTER
+\*------------------------------------*/
+
+
+.primary-footer {
+  .credits {
+    margin-bottom: 0;
+    @extend %font-size-xs;
+  }
+}
