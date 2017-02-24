@@ -3,49 +3,10 @@
 ## Blocks & variations
 
 ### Index
-#### Styles
-- width
-  - width-full
-  - width-twothird
-  - width-half
-  - width-third
-- spacing
-  - spacing-xs
-  - spacing-sm
-  - spacing-md
-  - spacing-lg
-  - spacing-xl
-- background-color
-  - bg-dark
-  - bg-light
-- text-color
-  - text-dark
-  - text-light
-
-#### Layouts
 - grid
 - list
 
 ### Article
-#### Styles
-- width
-  - width-full
-  - width-twothird
-  - width-half
-  - width-third
-- spacing
-  - spacing-xs
-  - spacing-sm
-  - spacing-md
-  - spacing-lg
-  - spacing-xl
-- background-color
-  - bg-dark
-  - bg-light
-- text-color
-  - text-dark
-  - text-light
-#### Layouts
 - scroll
   - scroll-contain
   - scroll-full
@@ -56,6 +17,25 @@
 - slide
   - slide-cover
   - slide-contain
+
+### Styles
+- width
+  - width-full
+  - width-twothird
+  - width-half
+  - width-third
+- spacing
+  - spacing-xs
+  - spacing-sm
+  - spacing-md
+  - spacing-lg
+  - spacing-xl
+- background-color
+  - bg-dark
+  - bg-light
+- text-color
+  - text-dark
+  - text-light
 
 ## Tools
 
